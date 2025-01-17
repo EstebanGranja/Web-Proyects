@@ -5,12 +5,12 @@ import base64
 
 app = Flask(__name__)
 
-# Ruta principal para cargar la página web
+
 @app.route('/')
 def home():
     return render_template('index.html')
 
-# Ruta para procesar el texto y generar el QR
+
 @app.route('/generate_qr', methods=['POST'])
 def generate_qr():
     data = request.json.get('text')
